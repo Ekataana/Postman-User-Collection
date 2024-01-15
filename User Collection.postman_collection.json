@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "625954b2-e6d1-42da-a8f8-d706acad5829",
+		"name": "User Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23885472"
+	},
+	"item": [
+		{
+			"name": "User list (negative - no auth)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User list (positive - auth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user?page=1&limit=10",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Ololosha\",\r\n\"lastName\": \"Big\",\r\n\"email\": \"ololo123@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User before update",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Ololoshochka\",\r\n\"lastName\": \"Big\",\r\n\"phone\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User after update",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"text\": \"The text for smart people\",\r\n\"image\": \"https://tapoban.com/wp-content/uploads/2022/12/3.png\",\r\n\"likes\": \"100258\",\r\n\"tags\": \"osho\",\r\n\"owner\": \"65a556f73474381ed72527a2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/post/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by User Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2/post",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/post",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"message\": \"I love Osho!\",\r\n\"owner\": \"65a556f73474381ed72527a2\",\r\n\"post\": \"65a55bc53474380fb9252a0c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/comment/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"comment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment By User Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2/comment",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/comment/65a55fe8e7ecc6139e8e1284",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"comment",
+						"65a55fe8e7ecc6139e8e1284"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment By User Id after delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2/comment",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User after removing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/65a556f73474381ed72527a2",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"65a556f73474381ed72527a2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "65a54fb60440493af00faa13",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
